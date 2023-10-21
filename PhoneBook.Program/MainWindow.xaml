@@ -9,6 +9,11 @@
         Height="350" Width="600"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
+    
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </Window.Resources>
+    
     <StackPanel>
         <TextBlock Text="Телефонный справочник"
                    FontSize="30"
@@ -32,37 +37,37 @@
                             Margin="5">
                     <Label Content="_Id"
                            Target="{Binding ElementName=InputId}"
-                           Width="100"/>
+                           Style="{StaticResource StyleLabel}"/>
                     <TextBox x:Name="InputId"
                              IsEnabled="False"
-                             Width="275"/>
+                             Style="{StaticResource StyleInput}"/>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal"
                             Margin="5">
                     <Label Content="_Фамилия"
                            Target="{Binding ElementName=InputLastName}"
-                           Width="100"/>
+                           Style="{StaticResource StyleLabel}"/>
                     <TextBox x:Name="InputLastName"
-                             Width="275"/>
+                             Style="{StaticResource StyleInput}"/>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal"
                             Margin="5">
                     <Label Content="_Имя"
                            Target="{Binding ElementName=InputFirstName}"
-                           Width="100"/>
+                           Style="{StaticResource StyleLabel}"/>
                     <TextBox x:Name="InputFirstName"
-                             Width="275"/>
+                             Style="{StaticResource StyleInput}"/>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal"
                             Margin="5">
                     <Label Content="_Телефон"
                            Target="{Binding ElementName=InputPhone}"
-                           Width="100"/>
+                           Style="{StaticResource StyleLabel}"/>
                     <TextBox x:Name="InputPhone"
-                             Width="275"/>
+                             Style="{StaticResource StyleInput}"/>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal"
@@ -70,27 +75,19 @@
                             HorizontalAlignment="Center">
                     <Button x:Name="ButtonCreate"
                             Content="Создать"
-                            FontSize="16"
-                            Foreground="White" Background="DarkBlue"
-                            Margin="5" Padding="5"
+                            Style="{StaticResource StyleButtonCreate}"
                             Click="ButtonCreate_OnClick"/>
                     <Button x:Name="ButtonSave"
                             Content="Сохранить"
-                            FontSize="16"
-                            Foreground="White" Background="DarkGreen"
-                            Margin="5" Padding="5"
+                            Style="{StaticResource StyleButtonSave}"
                             Click="ButtonSave_OnClick"/>
                     <Button x:Name="ButtonDelete"
                             Content="Удалить"
-                            FontSize="16"
-                            Foreground="White" Background="Red"
-                            Margin="5" Padding="5"
+                            Style="{StaticResource StyleButtonDelete}"
                             Click="ButtonDelete_OnClick"/>
                     <Button x:Name="ButtonClear"
                             Content="Очистить"
-                            FontSize="16"
-                            Foreground="White" Background="Orange"
-                            Margin="5" Padding="5"
+                            Style="{StaticResource StyleButtonClear}"
                             Click="ButtonClear_OnClick"/>
                 </StackPanel>
             </StackPanel>

@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- STYLE DEFAULT -->
+    <Style x:Key="StyleDefault" TargetType="{x:Type Control}">
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+    
+    <!-- STYLE LABEL & INPUT -->
+    <Style x:Key="StyleLabel" TargetType="{x:Type Label}"
+           BasedOn="{StaticResource StyleDefault}">
+        <Setter Property="Foreground" Value="DarkBlue"/>
+        <Setter Property="Width" Value="75"/>
+    </Style>
+    
+    <Style x:Key="StyleInput" TargetType="{x:Type TextBox}"
+           BasedOn="{StaticResource StyleDefault}">
+        <Setter Property="Foreground" Value="Blue"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Width" Value="275"/>
+    </Style>
+    
+    <!-- STYLE BUTTON -->
+    <Style x:Key="StyleButtonDefault" TargetType="{x:Type Button}"
+           BasedOn="{StaticResource StyleDefault}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Padding" Value="5"/>
+    </Style>
+    
+    <Style x:Key="StyleButtonCreate" TargetType="{x:Type Button}"
+           BasedOn="{StaticResource StyleButtonDefault}">
+        <Setter Property="Background" Value="DarkBlue"/>
+    </Style>
+    <Style x:Key="StyleButtonSave" TargetType="{x:Type Button}"
+           BasedOn="{StaticResource StyleButtonDefault}">
+        <Setter Property="Background" Value="DarkGreen"/>
+    </Style>
+    <Style x:Key="StyleButtonDelete" TargetType="{x:Type Button}"
+           BasedOn="{StaticResource StyleButtonDefault}">
+        <Setter Property="Background" Value="DarkRed"/>
+    </Style>
+    <Style x:Key="StyleButtonClear" TargetType="{x:Type Button}"
+           BasedOn="{StaticResource StyleButtonDefault}">
+        <Setter Property="Background" Value="DarkOrange"/>
+    </Style>
+</ResourceDictionary>
